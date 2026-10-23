@@ -1,28 +1,5 @@
-name = input("Enter employee name: ")
-salary = float(input("Enter monthly salary: "))
-experience = float(input("Enter years of experience: "))
-rating = int(input("Enter performance rating (1 to 5): "))
-
-if rating < 1 or rating > 5:
-    print("Invalid rating! Rating must be between 1 and 5.")
+year = int(input("Enter year: "))
+if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+    print("Leap year")
 else:
-    if experience >= 10 and rating >= 4:
-        bonus_pct = 20
-    elif experience >= 5 and rating >= 4:
-        bonus_pct = 15
-    elif experience >= 2 and rating >= 3:
-        bonus_pct = 10
-    else:
-        bonus_pct = 0
-
-    bonus_amount = (salary * bonus_pct) / 100
-    final_salary = salary + bonus_amount
-
-    print("--- Bonus Calculation ---")
-    print("Employee Name:", name)
-    print("Bonus Percentage:", bonus_pct, "%")
-    print("Bonus Amount: Rs.", bonus_amount)
-    print("Final Salary: Rs.", final_salary)
-
-    if rating == 5:
-        print("Performance Message: Excellent Performer")
+    print("Not a leap year")

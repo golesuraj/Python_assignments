@@ -1,11 +1,7 @@
-# Mini Project 4: Shopping Cart Total
-# Problem Statement: Calculate a customer's shopping bill from multiple products.
-
 print("=" * 45)
 print("            SHOPPING CART BILLING")
 print("=" * 45)
 
-# Input validation for number of products
 while True:
     try:
         num_products = int(input("Enter number of products: "))
@@ -21,7 +17,6 @@ print("\n--- Enter Product Details ---")
 for i in range(1, num_products + 1):
     print(f"\nProduct #{i}:")
     
-    # Validate price (non-negative)
     while True:
         try:
             price = float(input("  Enter price (Rs.): "))
@@ -31,7 +26,6 @@ for i in range(1, num_products + 1):
         except ValueError:
             print("  Invalid input! Enter a valid price.")
 
-    # Validate quantity (must be positive integer)
     while True:
         try:
             qty = int(input("  Enter quantity: "))
@@ -45,7 +39,6 @@ for i in range(1, num_products + 1):
     subtotal += item_total
     print(f"  Item Subtotal: Rs. {item_total:.2f}")
 
-# Calculate discount: 10% when subtotal is Rs. 3,000 or more
 if subtotal >= 3000:
     discount = subtotal * 0.10
 else:
@@ -53,7 +46,6 @@ else:
 
 discounted_amount = subtotal - discount
 
-# Delivery charge: Rs. 100 if discounted amount is below Rs. 1,500; otherwise free
 if discounted_amount < 1500:
     delivery_charge = 100.0
 else:
@@ -61,7 +53,6 @@ else:
 
 final_payable = discounted_amount + delivery_charge
 
-# Display Final Bill
 print("\n" + "=" * 45)
 print("               ORDER INVOICE")
 print("=" * 45)

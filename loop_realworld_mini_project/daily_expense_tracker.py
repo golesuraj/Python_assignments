@@ -1,11 +1,7 @@
-# Mini Project 1: Daily Expense Tracker
-# Problem Statement: Record expenses for a chosen number of days and summarize spending.
-
 print("=" * 45)
 print("       DAILY EXPENSE TRACKER")
 print("=" * 45)
 
-# Input validation for number of days
 while True:
     try:
         num_days = int(input("Enter number of days to track: "))
@@ -18,7 +14,6 @@ while True:
 total_expense = 0.0
 highest_expense = 0.0
 
-# Loop through each day to record expense
 for day in range(1, num_days + 1):
     while True:
         try:
@@ -31,17 +26,13 @@ for day in range(1, num_days + 1):
 
     total_expense += expense
     
-    # Track the highest single-day expense
     if day == 1 or expense > highest_expense:
         highest_expense = expense
 
-# Calculate average daily expense
 average_expense = total_expense / num_days
 
-# Determine budget status
 budget_status = "Budget Alert" if total_expense > 5000 else "Within Budget"
 
-# Display Summary Report
 print("\n" + "=" * 45)
 print("           EXPENSE SUMMARY")
 print("=" * 45)

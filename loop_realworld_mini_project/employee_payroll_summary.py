@@ -1,11 +1,7 @@
-# Mini Project 7: Employee Payroll Summary
-# Problem Statement: Calculate payroll details for several employees.
-
 print("=" * 60)
 print("             EMPLOYEE PAYROLL SUMMARY")
 print("=" * 60)
 
-# Input validation for number of employees
 while True:
     try:
         num_employees = int(input("Enter number of employees: "))
@@ -15,7 +11,7 @@ while True:
     except ValueError:
         print("Invalid input! Please enter an integer.")
 
-OVERTIME_RATE = 200.0  # Rs. 200 per hour
+OVERTIME_RATE = 200.0
 total_net_payroll = 0.0
 
 print("\n--- Processing Employee Payroll ---")
@@ -25,7 +21,6 @@ for i in range(1, num_employees + 1):
     while not name:
         name = input("  Name cannot be empty. Enter name: ").strip()
 
-    # Validate basic salary
     while True:
         try:
             basic_salary = float(input("  Enter basic salary (Rs.): "))
@@ -35,7 +30,6 @@ for i in range(1, num_employees + 1):
         except ValueError:
             print("  Invalid input! Enter a valid salary amount.")
 
-    # Validate overtime hours
     while True:
         try:
             ot_hours = float(input("  Enter overtime hours worked: "))
@@ -45,11 +39,9 @@ for i in range(1, num_employees + 1):
         except ValueError:
             print("  Invalid input! Enter a valid number of hours.")
 
-    # Calculations
     overtime_pay = ot_hours * OVERTIME_RATE
     gross_salary = basic_salary + overtime_pay
 
-    # Deductions: 10% if gross salary >= 50,000, else 5%
     if gross_salary >= 50000:
         deduction_rate = 0.10
     else:
@@ -64,7 +56,6 @@ for i in range(1, num_employees + 1):
     print(f"  --> Deduction ({int(deduction_rate * 100)}%): Rs. {deduction:.2f}")
     print(f"  --> Net Salary   : Rs. {net_salary:.2f}")
 
-# Display Company-wide Summary
 print("\n" + "=" * 60)
 print("             PAYROLL GRAND SUMMARY")
 print("=" * 60)

@@ -1,11 +1,7 @@
-# Mini Project 2: Student Marks and Grade Report
-# Problem Statement: Process marks for multiple students and generate a class performance summary.
-
 print("=" * 50)
 print("       STUDENT MARKS AND GRADE REPORT")
 print("=" * 50)
 
-# Input validation for number of students
 while True:
     try:
         num_students = int(input("Enter number of students: "))
@@ -25,7 +21,6 @@ for i in range(1, num_students + 1):
     while not name:
         name = input("Name cannot be empty. Enter student name: ").strip()
 
-    # Reject marks outside 0-100
     while True:
         try:
             marks = float(input(f"Enter marks for {name} (0-100): "))
@@ -35,7 +30,6 @@ for i in range(1, num_students + 1):
         except ValueError:
             print("Invalid input! Please enter a numeric value.")
 
-    # Determine grade
     if marks >= 75:
         grade = "A"
     elif marks >= 60:
@@ -47,7 +41,6 @@ for i in range(1, num_students + 1):
     else:
         grade = "Fail"
 
-    # Count pass and fail students
     if grade != "Fail":
         pass_count += 1
     else:
@@ -57,10 +50,8 @@ for i in range(1, num_students + 1):
 
     print(f"Result for {name}: Marks = {marks:.2f}, Grade = {grade}")
 
-# Calculate class average
 class_average = total_marks / num_students
 
-# Display summary report
 print("\n" + "=" * 50)
 print("            CLASS PERFORMANCE SUMMARY")
 print("=" * 50)

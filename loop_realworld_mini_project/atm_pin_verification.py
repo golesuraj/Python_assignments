@@ -1,6 +1,3 @@
-# Mini Project 3: ATM PIN Verification
-# Problem Statement: Simulate ATM access with a limited number of PIN attempts.
-
 print("=" * 45)
 print("            ATM PIN VERIFICATION")
 print("=" * 45)
@@ -10,7 +7,6 @@ MAX_ATTEMPTS = 3
 attempts_used = 0
 access_granted = False
 
-# While loop for limited attempts
 while attempts_used < MAX_ATTEMPTS:
     entered_pin = input(f"Enter your 4-digit PIN (Attempt {attempts_used + 1}/{MAX_ATTEMPTS}): ").strip()
     attempts_used += 1
@@ -24,7 +20,6 @@ while attempts_used < MAX_ATTEMPTS:
         if remaining > 0:
             print(f"Incorrect PIN. You have {remaining} attempt(s) remaining.\n")
 
-# Display status and summary
 print("\n" + "=" * 45)
 print("            TRANSACTION STATUS")
 print("=" * 45)

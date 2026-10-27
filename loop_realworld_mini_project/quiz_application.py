@@ -1,12 +1,8 @@
-# Mini Project 8: Quiz Application
-# Problem Statement: Create a command-line quiz using a fixed set of questions.
-
 print("=" * 55)
 print("              PYTHON GENERAL KNOWLEDGE QUIZ")
 print("=" * 55)
 print("Answer the following 5 questions to test your knowledge.\n")
 
-# Questions and correct answers stored in a collection
 quiz_data = [
     {
         "question": "1. What is the keyword used to define a function in Python?",
@@ -33,7 +29,6 @@ quiz_data = [
 score = 0
 total_questions = len(quiz_data)
 
-# Loop to ask each question and collect answer
 for item in quiz_data:
     print(item["question"])
     user_answer = input("Your answer: ").strip().lower()
@@ -44,10 +39,8 @@ for item in quiz_data:
     else:
         print(f">> Incorrect! The correct answer was: {item['answer']}\n")
 
-# Calculate percentage
 percentage = (score / total_questions) * 100
 
-# Performance evaluation
 if percentage >= 80:
     performance_message = "Excellent"
 elif percentage >= 60:
@@ -55,7 +48,6 @@ elif percentage >= 60:
 else:
     performance_message = "Keep Practicing"
 
-# Display Final Report
 print("=" * 55)
 print("                 QUIZ RESULT")
 print("=" * 55)

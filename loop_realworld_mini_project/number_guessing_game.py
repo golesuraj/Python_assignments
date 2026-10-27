@@ -1,6 +1,3 @@
-# Mini Project 5: Number Guessing Game
-# Problem Statement: Give the user a limited number of chances to guess a secret number.
-
 print("=" * 45)
 print("          NUMBER GUESSING GAME")
 print("=" * 45)
@@ -12,7 +9,6 @@ MAX_ATTEMPTS = 5
 attempts_used = 0
 guessed_correctly = False
 
-# While loop for limited guess attempts
 while attempts_used < MAX_ATTEMPTS:
     try:
         guess = int(input(f"Enter guess #{attempts_used + 1}: "))
@@ -35,7 +31,6 @@ while attempts_used < MAX_ATTEMPTS:
     if remaining > 0:
         print(f"Chances left: {remaining}\n")
 
-# Final result summary
 print("\n" + "=" * 45)
 print("               GAME RESULT")
 print("=" * 45)

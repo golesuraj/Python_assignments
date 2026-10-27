@@ -1,11 +1,7 @@
-# Mini Project 6: Electricity Usage Analyzer
-# Problem Statement: Analyze daily electricity consumption over a selected period.
-
 print("=" * 50)
 print("        ELECTRICITY USAGE ANALYZER")
 print("=" * 50)
 
-# Input validation for number of days
 while True:
     try:
         num_days = int(input("Enter number of days to analyze: "))
@@ -30,27 +26,21 @@ for day in range(1, num_days + 1):
         except ValueError:
             print("Invalid input! Please enter a numeric value.")
 
-    # Accumulate total
     total_units += units
 
-    # Count days with usage greater than 10 units
     if units > 10:
         high_usage_day_count += 1
 
-    # Track maximum daily usage
     if day == 1 or units > max_daily_usage:
         max_daily_usage = units
 
-# Calculate average usage
 average_units = total_units / num_days
 
-# Determine overall usage status
 if total_units > 300:
     usage_status = "High Usage"
 else:
     usage_status = "Normal Usage"
 
-# Display Summary Output
 print("\n" + "=" * 50)
 print("            CONSUMPTION SUMMARY")
 print("=" * 50)

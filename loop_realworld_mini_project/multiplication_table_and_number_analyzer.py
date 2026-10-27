@@ -1,11 +1,7 @@
-# Mini Project 10: Multiplication Table and Number Analyzer
-# Problem Statement: Print a multiplication table and analyze a range of integers.
-
 print("=" * 55)
 print("     MULTIPLICATION TABLE & NUMBER ANALYZER")
 print("=" * 55)
 
-# Part 1: Input and Table Generation
 while True:
     try:
         table_num = int(input("Enter a positive integer for multiplication table: "))
@@ -20,12 +16,10 @@ for i in range(1, 11):
     product = table_num * i
     print(f"{table_num:2d} x {i:2d} = {product:3d}")
 
-# Part 2: Number Range Analysis
 print("\n" + "-" * 55)
 print("                 RANGE ANALYZER")
 print("-" * 55)
 
-# Input and validation: start must not be greater than end
 while True:
     try:
         start_val = int(input("Enter start of number range: "))
@@ -40,7 +34,6 @@ even_count = 0
 odd_count = 0
 range_sum = 0
 
-# Loop through each integer in range [start_val, end_val]
 for num in range(start_val, end_val + 1):
     range_sum += num
     if num % 2 == 0:
@@ -48,7 +41,6 @@ for num in range(start_val, end_val + 1):
     else:
         odd_count += 1
 
-# Display summary report
 print("\n" + "=" * 55)
 print("                 ANALYSIS REPORT")
 print("=" * 55)
